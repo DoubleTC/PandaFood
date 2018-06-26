@@ -6,7 +6,7 @@
                 <li class="current"><a href="{{asset('tai-khoan/thong-tin')}}">{{Auth::user()->user_name}}</a></li>
                 <li><a href="#"><span> Đổi mật khẩu</span></a></li>
                 <li><a href="#"><span> Địa chỉ giao hàng</span></a></li>
-                <li><a href="#"><span> Theo dõi đơn hàng</span></a></li>
+                <li><a href="{{asset('tai-khoan/don-hang')}}"><span> Theo dõi đơn hàng</span></a></li>
                 <li><a href="{{asset('gio-hang')}}"><span> Giỏ hàng</span></a></li>
                 <li><a href="{{asset('dang-xuat')}}"><span> Đăng xuất</span></a></li>
             </ul>

@@ -28,7 +28,7 @@ class FrontendController extends Controller
         $data['title'] = Product::find($product_id);
         $data['product'] = DB::table('pdf_products')
             ->join('pdf_categories','pdf_products.category_id','=','pdf_categories.category_id')
-            ->select('pdf_products.*','pdf_categories.category_id','pdf_categories.category_title')
+            ->select('pdf_products.*','pdf_categories.category_id','pdf_categories.category_title','pdf_categories.category_slug')
             ->where('product_id', $product_id)
             ->get();
         $data['relaproduct'] = Product::where([

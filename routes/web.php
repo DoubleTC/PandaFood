@@ -118,6 +118,16 @@ Route::group(['namespace' => 'Admincp'], function (){
                 Route::get('delete/{product_id}', 'ProductController@getDelProduct');
             });
 
+            Route::group(['prefix' => 'order'], function (){
+               Route::get('/', 'OrderController@getOrder');
+
+               Route::get('edit/{order_id}', 'OrderController@getEditOrder');
+               Route::post('edit/{order_id}', 'OrderController@postEditOrder');
+
+               Route::get('delete/{order_id}', 'OrderController@getDelOrder');
+
+            });
+
             Route::group(['prefix' => 'shipper'], function (){
                 Route::get('/', 'ShipperController@getShipper');
                 Route::post('/', 'ShipperController@postShipper');

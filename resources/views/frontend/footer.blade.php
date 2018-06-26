@@ -25,7 +25,7 @@
             <div class="row">
                 <div class="col-sm-4 col-xs-12 col-lg-4">
                     <div class="co-info">
-                        <div><a href="#"><img height="110px" src="{{asset('uploads/logos/'.$infoweb->info_imgmain)}}" alt="footer logo"></a></div>
+                        <div><a href="{{asset('/')}}"><img height="110px" src="{{asset('uploads/logos/'.$infoweb->info_imgmain)}}" alt="footer logo"></a></div>
                         <address>
                             <div><em class="icon-location-arrow"></em> <span>{{$infoweb->info_address}}</span></div>
                             <div> <em class="icon-mobile-phone"></em><span>{{$infoweb->info_phone}}</span></div>

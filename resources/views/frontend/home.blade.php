@@ -6,26 +6,26 @@
     @include('frontend.slide')
     <div class="our-features-box wow bounceInUp animated animated">
         <div class="container">
-            <ul>
-                <li>
+            <ul class="row">
+                <li class="col-md-6">
                     <div class="feature-box free-shipping">
                         <div class="icon-truck"></div>
                         <div class="content">Giao hàng toàn quốc trong 78H</div>
                     </div>
                 </li>
-                <li>
-                    <div class="feature-box need-help">
-                        <div class="icon-support"></div>
-                        <div class="content">Hotline:<br>{{$infoweb->info_phone}}</div>
-                    </div>
-                </li>
-                <li>
+                <li class="col-md-6">
                     <div class="feature-box money-back">
                         <div class="icon-money"></div>
                         <div class="content">Đa dạng phương thức thanh toán</div>
                     </div>
                 </li>
-                <li class="last">
+                <li class="col-md-6">
+                    <div class="feature-box need-help">
+                        <div class="icon-support"></div>
+                        <div class="content">Hotline:<br>{{$infoweb->info_phone}}</div>
+                    </div>
+                </li>
+                <li class="col-md-6 last">
                     <div class="feature-box return-policy">
                         <div class="icon-return"></div>
                         <div class="content">Cam kết bán hàng bình ổn giá</div>
@@ -98,7 +98,6 @@
             <div class="new_title">
                 <h2>Sản phẩm mới</h2>
             </div>
-            <div class="cate-banner-img"><img src="./assests/img/category-banner.jpg" alt="Retis lapen casen"></div>
             <div id="best-seller" class="product-flexslider hidden-buttons">
                 <div class="slider-items slider-width-col4 products-grid">
                     @foreach($productlist as $prod)

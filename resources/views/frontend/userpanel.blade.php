@@ -57,17 +57,19 @@
                         <td><span class="nobr">{{date('d-m-Y',strtotime($order->order_receivetime))}}</span></td>
                         <td>
                             <em>
-                                @if($order->order_status == 0)
-                                    Chờ xử lý
-                                @elseif($order->order_status == 1)
-                                    Đã xác nhận
-                                @elseif($order->order_status == 2)
-                                    Đã đóng gói
-                                @elseif($order->order_status == 3)
-                                    Đang vận chuyển
-                                @elseif($order->order_status == 4)
-                                    Giao thành công
-                                @endif
+                                <span class="status">
+                                  @if($order->order_status == 0)
+                                    <span class="label label-danger">Chờ xử lý</span>
+                                  @elseif($order->order_status == 1)
+                                    <span class="label label-info">Đã xác nhận</span>
+                                  @elseif($order->order_status == 2)
+                                    <span class="label label-primary">Đã đóng gói</span>
+                                  @elseif($order->order_status == 3)
+                                    <span class="label label-warning">Đang vận chuyển</span>
+                                  @elseif($order->order_status == 4)
+                                    <span class="label label-success">Giao thành công</span>
+                                  @endif
+                                </span>
                             </em>
                         </td>
                       </tr>

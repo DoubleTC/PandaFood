@@ -11,12 +11,12 @@
                             <i class="material-icons">face</i>
                         </div>
                         <p class="card-category">Tài khoản khách hàng</p>
-                        <h3 class="card-title">{{Auth::user()->where('group_id', 2)->count()}}</h3>
+                        <h3 class="card-title">{{$user}}</h3>
                     </div>
                     <div class="card-footer">
                         <div class="stats">
-                            <i class="material-icons text-danger">warning</i>
-                            <a href="#pablo">Get More Space...</a>
+                            <i class="material-icons">face</i>
+                            <a href="{{asset('admincp/dashboard/manage-user')}}">Xem chi tiết</a>
                         </div>
                     </div>
                 </div>
@@ -28,11 +28,12 @@
                             <i class="material-icons">equalizer</i>
                         </div>
                         <p class="card-category">Số lượng sản phẩm</p>
-                        <h3 class="card-title">75.521</h3>
+                        <h3 class="card-title">{{$product}}</h3>
                     </div>
                     <div class="card-footer">
                         <div class="stats">
-                            <i class="material-icons">local_offer</i> Tracked from Google Analytics
+                            <i class="material-icons">equalizer</i>
+                            <a href="{{asset('admincp/dashboard/product')}}">Xem chi tiết</a>
                         </div>
                     </div>
                 </div>
@@ -44,11 +45,12 @@
                             <i class="material-icons">shopping_cart</i>
                         </div>
                         <p class="card-category">Số lượng đơn hàng</p>
-                        <h3 class="card-title">$34,245</h3>
+                        <h3 class="card-title">{{$order}}</h3>
                     </div>
                     <div class="card-footer">
                         <div class="stats">
-                            <i class="material-icons">date_range</i> Last 24 Hours
+                            <i class="material-icons">shopping_cart</i>
+                            <a href="{{asset('admincp/dashboard/order')}}">Xem chi tiết</a>
                         </div>
                     </div>
                 </div>
@@ -60,7 +62,7 @@
                             <i class="material-icons">check_circle</i>
                         </div>
                         <p class="card-category">Số lượng đơn hàng thành công</p>
-                        <h3 class="card-title">+245</h3>
+                        <h3 class="card-title">{{$orderoke}}</h3>
                     </div>
                     <div class="card-footer">
                         <div class="stats">

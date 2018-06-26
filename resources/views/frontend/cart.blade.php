@@ -50,7 +50,7 @@
                                 <tfoot>
                                     <tr class="first last">
                                         <td colspan="50" class="a-right last">
-                                            <button type="button" title="Tiếp tục mua hàng" class="button btn-continue" onClick="window.location='/'">
+                                            <button type="button" title="Tiếp tục mua hàng" class="button btn-continue" onClick="window.location='{{asset('/')}}'">
                                                 <span>
                                                     <span>Tiếp tục mua hàng</span>
                                                 </span>
@@ -191,7 +191,7 @@
                                                 <span>Đặt mua</span>
                                             </button>
                                         @else
-                                            <button type="button" title="Đăng nhập để đặt mua" class="button btn-proceed-checkout" onClick="window.location='dang-nhap'">
+                                            <button type="button" title="Đăng nhập để đặt mua" class="button btn-proceed-checkout" onClick="window.location='{{asset('dang-nhap')}}'">
                                                 <span>Đăng nhập để đặt mua</span>
                                             </button>
                                         @endif

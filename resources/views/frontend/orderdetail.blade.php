@@ -25,20 +25,21 @@
             <div class="recent-orders">
               <div class="title-buttons">
                   @foreach($order as $ord)
-                  <strong>Chi tiết hóa đơn #{{$ord->order_id}}:
+                  <strong>Chi tiết hóa đơn <span class="badge">#{{$ord->order_id}}</span> -
                       <span class="status">
                           @if($ord->order_status == 0)
-                              Chờ xử lý
+                              <span class="label label-danger">Chờ xử lý</span>
                           @elseif($ord->order_status == 1)
-                              Đã xác nhận
+                              <span class="label label-info">Đã xác nhận</span>
                           @elseif($ord->order_status == 2)
-                              Đã đóng gói
+                              <span class="label label-primary">Đã đóng gói</span>
                           @elseif($ord->order_status == 3)
-                              Đang vận chuyển
+                              <span class="label label-warning">Đang vận chuyển</span>
                           @elseif($ord->order_status == 4)
-                              Giao thành công
+                              <span class="label label-success">Giao thành công</span>
                           @endif
-                      </span></strong>
+                      </span>
+                  </strong>
                   @endforeach
               </div>
               <div class="table-responsive">

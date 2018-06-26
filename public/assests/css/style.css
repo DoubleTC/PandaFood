@@ -12096,7 +12096,7 @@ select#shipping-address-select {
 	line-height: 1.6em;
 }
 .form_background {
-	    padding:25px;
+    padding:25px;
     position: relative;
     margin-top: 0px;
     padding-bottom: 45px;
@@ -12137,7 +12137,7 @@ select#shipping-address-select {
 }
 
 #itemcate{
-	height: 95px;
+	height: auto;
 	border-radius: 7px;
 	text-align: center;
 	display: block;
@@ -12147,6 +12147,8 @@ select#shipping-address-select {
 #itemcate::after {
 	content: "";
 	background: url(/assests/img/imgbkct.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 	opacity: 0.9;
 	top: 0;
 	left: 0;
@@ -12265,4 +12267,8 @@ a.button.btn-empty:hover{
 	font-weight: 700;
 	font-family: 'Montserrat', sans-serif;
 	text-transform: uppercase;
+}
+.status .label {
+	color: #fff;
+	font-size: 14px;
 }

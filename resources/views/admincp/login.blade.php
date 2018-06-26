@@ -61,7 +61,7 @@
 <nav class="navbar navbar-expand-lg bg-primary navbar-transparent navbar-absolute" color-on-scroll="500">
 	<div class="container">
         <div class="navbar-wrapper">
-              <a class="navbar-brand" href="#">CỬA HÀNG THỰC PHẨM SẠCH PANDAFOOD</a>
+              <a class="navbar-brand" href="{{asset('/')}}">CỬA HÀNG THỰC PHẨM SẠCH PANDAFOOD</a>
         </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="sr-only">Toggle navigation</span>
@@ -121,7 +121,7 @@
                 <nav class="pull-left">
                     <ul>
                         <li>
-                            <a href="#">
+                            <a href="{{asset('/')}}">
                                 Trang chủ
                             </a>
                         </li>

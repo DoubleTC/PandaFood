@@ -38,8 +38,8 @@ jQuery(document).ready(function() {
         /*  Best Seller Slider */
         jQuery("#top-categories .slider-items").owlCarousel({
             items: 4,
-            itemsDesktop: [1024, 5],
-            itemsDesktopSmall: [900, 4],
+            itemsDesktop: [1250, 3],
+            itemsDesktopSmall: [991, 2],
             itemsTablet: [600, 2],
             itemsMobile: [320, 2],
             navigation: !0,
@@ -50,9 +50,9 @@ jQuery(document).ready(function() {
         /*  Featured Product Slider */
         jQuery("#best-seller .slider-items").owlCarousel({
             items: 5,
-            itemsDesktop: [1024, 4],
-            itemsDesktopSmall: [900, 3],
-            itemsTablet: [600, 2],
+            itemsDesktop: [1250, 4],
+            itemsDesktopSmall: [991, 3],
+            itemsTablet: [480, 2],
             itemsMobile: [320, 1],
             navigation: !0,
             navigationText: ['<a class="flex-prev"></a>', '<a class="flex-next"></a>'],

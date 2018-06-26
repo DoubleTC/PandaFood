@@ -62,10 +62,10 @@
     <div class="sidebar" data-color="rose" data-background-color="black" data-image="./assetscp/img/sidebar-1.jpg">
 
         <div class="logo">
-            <a href="#" class="simple-text logo-mini">
+            <a href="{{asset('/')}}" class="simple-text logo-mini">
                 CP
             </a>
-            <a href="#" class="simple-text logo-normal">
+            <a href="{{asset('/')}}" class="simple-text logo-normal">
                 {{$infoweb->info_name}}
             </a>
         </div>
@@ -167,7 +167,7 @@
                 </li>
 
                 <li class="nav-item ">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="{{asset('admincp/dashboard/order')}}">
                         <i class="material-icons">shopping_cart</i>
                         <p> Quản lý đơn hàng </p>
                     </a>

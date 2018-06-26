@@ -3,7 +3,7 @@
         <div class="header-container container">
             <div class="row">
                 <div class="logo">
-                    <a href="/" title="{{$infoweb->info_title}}">
+                    <a href="{{asset('/')}}" title="{{$infoweb->info_title}}">
                         <div><img height="63px" src="{{asset('uploads/logos/'.$infoweb->info_imgmain)}}" alt="{{$infoweb->info_title}}"></div>
                     </a>
                 </div>
@@ -17,7 +17,7 @@
                             <ul id="nav" class="hidden-xs">
 
                                 <li class="active">
-                                    <a class="level-top" href="/"><span>Trang chủ</span></a>
+                                    <a class="level-top" href="{{asset('/')}}"><span>Trang chủ</span></a>
                                 </li>
                                 <li class="mega-menu"><a class="level-top" href="#"><span>Sản phẩm</span></a>
                                     <div class="level0-wrapper dropdown-6col" style="left: 0px; display: none;">

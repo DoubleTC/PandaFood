@@ -8,8 +8,8 @@
         <div class="row">
           <div class="col-xs-12">
             <ul>
-              <li class="home"> <a href="#" title="Trang chủ {{$infoweb->info_name}}">Trang chủ {{$infoweb->info_name}}</a> <span>—› </span> </li>
-              <li class="category1599"> <a href="{{'danh-muc/'.$prod->category_id.'-'.$prod->category_title}}" title="{{$prod->category_title}}">{{$prod->category_title}}</a> <span>—› </span> </li>
+              <li class="home"> <a href="{{asset('/')}}" title="Trang chủ {{$infoweb->info_name}}">Trang chủ {{$infoweb->info_name}}</a> <span>—› </span> </li>
+              <li class="category1599"> <a href="{{asset('danh-muc/'.$prod->category_id.'-'.$prod->category_slug.'.html')}}" title="{{$prod->category_title}}">{{$prod->category_title}}</a> <span>—› </span> </li>
             </ul>
           </div>
           <!--col-xs-12-->

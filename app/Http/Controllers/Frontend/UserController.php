@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Order;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Hamcrest\Core\DescribedAs;
 
 class UserController extends Controller
 {
@@ -31,7 +32,7 @@ class UserController extends Controller
         return view('frontend.listorder', $data);
     }
 
-    public function getOrderDetail($order_id){
+    public function getOrderDetail($order_id, $id = null){
         $data['order'] = DB::table('pdf_orders')
             ->join('pdf_shippers','pdf_orders.shipper_id','=','pdf_shippers.shipper_id')
             ->select('pdf_orders.*','pdf_shippers.shipper_id','pdf_shippers.shipper_name')
@@ -41,12 +42,19 @@ class UserController extends Controller
             ])
             ->orderBy('order_id','desc')
             ->get();
-        $data['details'] = DB::table('pdf_orderdetails')
-            ->join('pdf_products','pdf_orderdetails.product_id','=','pdf_products.product_id')
-            ->select('pdf_orderdetails.*','pdf_products.product_id','pdf_products.product_name','pdf_products.product_img','pdf_products.product_slug')
-            ->where('order_id', $order_id)
-            ->orderBy('detail_id','desc')
-            ->get();
+        if($data['order']->isEmpty()){
+            return view('frontend.404error');
+        } else {
+            foreach ($data['order'] as $item) {
+                $id = $item->order_id;
+            }
+            $data['details'] = DB::table('pdf_orderdetails')
+                ->join('pdf_products', 'pdf_orderdetails.product_id', '=', 'pdf_products.product_id')
+                ->select('pdf_orderdetails.*', 'pdf_products.product_id', 'pdf_products.product_name', 'pdf_products.product_img', 'pdf_products.product_slug')
+                ->where('order_id', $id)
+                ->orderBy('detail_id', 'desc')
+                ->get();
+        }
         return view('frontend.orderdetail', $data);
     }
 }

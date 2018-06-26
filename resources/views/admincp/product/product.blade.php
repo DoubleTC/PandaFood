@@ -15,7 +15,7 @@
                             <div class="card-icon">
                                 <i class="material-icons">list</i>
                             </div>
-                            <h4 class="card-title">Danh sách danh mục</h4>
+                            <h4 class="card-title">Danh sách sản phẩm</h4>
                         </div>
 
                         <div class="card-body">
