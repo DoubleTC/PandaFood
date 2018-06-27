@@ -1,4 +1,4 @@
-# PandaFood
+# PandaFood - Laravel Framework
 
 
 ## Hướng dẫn cài đặt.
